@@ -195,7 +195,7 @@ function decodeString(str: string): string {
   try {
     return decodeURIComponent(str.replace(/\+/g,' '));
   } catch (e) {
-    return unescape(decodeURI(str));
+    return unescape(decodeURI(str).replace(/\+/g, ' '));
   }
 }
 
